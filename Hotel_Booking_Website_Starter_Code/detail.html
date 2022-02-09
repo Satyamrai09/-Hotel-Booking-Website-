@@ -10,14 +10,28 @@
 <div>
     <div id="header">
         <!-- image tage containing logo -->
-        <img src="assests/images/logo.png" alt="logo" width=150px height=100px>
-        <a href="login.html" target="_blank">Login</a>
-        
+      
+        <a href="index.html">
+            <img src="assests/images/logo.png" alt="logo" width=150px height=100px>
+        </a>
     </div>
     <div id="content">
         <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radison Blu">
         <br>
-        <a href="payment.html">Book Now</a>
+        <form method="get" action="payment.html">
+            <lable for="adults">Adults:</lable>
+            <input type="number" min="1"><br>
+            <label for="name">Name:</label>
+            <input type="text" required><br>
+            <label for="from date">From Date:</label>
+            <input type="date" required><br>
+            <label for="to date">To Date:</label>
+            <input type="date" required><br>
+            <label for="total">Total:</label>
+            <input type="text" disabled><br>
+            <input type="submit" value="Book Now">
+
+        </form>
         <h2>Radison Blu Hotel</h2>
         <p>RATING</p>
        
@@ -35,7 +49,7 @@
         <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis quas delectus sint debitis earum ut impedit ipsa aliquam? Provident excepturi ipsum corporis dolore quod qui rem rerum beatae, praesentium natus.</P>
     </div>
     <div id="Footer">
-        <a href="contact.html" target="_blank">Contact Us</a>
+        <a href="contact.html" >Contact Us</a>
         <br>
         <a href="https://www.facebook.com/" target="_blank">
             <img src="assests/images/facebook.png" alt="Facebook" height="20px" width="22px">
