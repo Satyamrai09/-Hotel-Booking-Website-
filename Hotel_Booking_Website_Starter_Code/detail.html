@@ -9,14 +9,20 @@
 </head>
 <body>
 <div class="container">
-    <header  style="background-color: rosybrown;"><!-- image tage containing logo -->
-        <a href="index.html">
-        <img style="height:60px ; width: 60px;" src="assests/images/logo.png" alt="logo" >
-    </a>
-        <a href="login.html">Login</a>
+     <!------------ start of header-------- -->
+     <header class="header" ><!-- image tage containing logo -->
+        <div>
+            <a href="index.html">
+                <img style="height:60px ; width: 60px;" src="assests/images/logo.png" alt="logo" >
+            </a>
+                <a class="log" href="login.html">Login</a>
+        </div>
+     
  
    
     </header>
+   
+       <!------------ end of header-------- -->
     <div id="content">
         <img style=" margin-top: 2%;margin-left:4% ; margin-right: 4%;margin-bottom: 0%; height: 500px; width: 500px;" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radison Blu">
         <br>
@@ -52,20 +58,23 @@
         <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis quas delectus sint debitis earum ut impedit ipsa aliquam? Provident excepturi ipsum corporis dolore quod qui rem rerum beatae, praesentium natus.</P>
     </div>
     </div>
-    <footer  style="background-color: rosybrown;"> <a href="contact.html" >Contact Us</a>
-        <br>
-        <a href="https://www.facebook.com/" target="_blank">
-            <img style= "height: 20px; width: 22px;" src="assests/images/facebook.png" alt="Facebook" >
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img style= "height: 20px; width: 22px;"src="assests/images/instagram.png" alt="instagram" >
-        </a>
-        <a href="https://www.twitter.com/" target="_blank">
-            <img style= "height: 20px; width: 22px;"src="assests/images/twitter.png" alt="twitter" >
-        </a>
-        <br>
-        © 2020 ROOM SEARCH PVT LTD.
-    </footer>
+  <!-- ----Footer--- -->
+
+  <footer>
+    <div class="footer-content">
+        <div  style="text-decoration: none; color: black;"><a href="contact.html" target="_blank">Contact Us</a></div>
+        
+        <div id="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook" width="20px" height="22px"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="twitter" width="20px" height="22px"></a>
+            <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="instagram"width="20px" height="22px"></a>
+        </div>
+        <div class="txt">&copy; 2020 ROOM SEARCH PVT. LTD.</div>
+    </div> 
+</footer>
+
+ 
+<!-- ----End of Footer--- -->
 </div>
 </body>
 </html>

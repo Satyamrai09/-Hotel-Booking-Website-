@@ -6,22 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/font.css">
 </head>
 <body>
-<div class="container">
-    <!-- sematic tags of HTML 5 -->
-    <header style="background-color: rosybrown;" ><!-- image tage containing logo -->
-        <img style="height:60px ; width: 60px;" src="assests/images/logo.png" alt="logo" >
-        <a href="login.html">Login</a>
+<div class="container" >
+    <!-- -----------header----------- -->
+    <header  >
+    <div class="header-container">
+        <div class="img-logo">
+            <img  src="assests/images/logo.png" alt="logo" >
+            <div class="log" style="text-decoration: none; color: black;"><a href="login.html">Login</a>
+            </div>
+        </div>
+     </div>
     </header>
+     <!-----------header ends-----------  -->
+    <div class="banner-image">
+        <form  action=" "> 
+        <input type="search" name="search" id="search" placeholder="City">
+        </form>
+    </div>
         
     
     
-      <form style="background-size: cover; background-position: center; height: 380px; width: 100%;  background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);">
-          <input  type="search" placeholder="City">
-      </form>
       <div id="content">
-      <!-- adding CSS to images -->
+     
       <a href="list.html" alt="List">
       <img style= "border-radius: 25%; padding: 4%; background-position: 100%; background-attachment: fixed; height: 150px; width: 150px;"src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="Delhi" >
     </a>
@@ -29,25 +38,28 @@
       <img style= "border-radius: 25%; padding: 4%; height: 150px; width: 150px;"src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="Hyederabad" >
       <img style= "border-radius: 25%; padding: 4%; height: 150px; width: 150px;"src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="Kolkata" >
       <br>
-     
+      <a style="text-align: center; margin-left: 40%;" href="index.html">View more>></a>
     </div>
-    <a href="index.html">View more>></a>
+    
     <!-- Semantic Tags of HTML 5 -->
-    <footer  style="background-color: rosybrown;"> <a href="contact.html" >Contact Us</a>
-        <br>
-        <a href="https://www.facebook.com/" target="_blank">
-            <img style= "height: 20px; width: 22px;" src="assests/images/facebook.png" alt="Facebook" >
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img style= "height: 20px; width: 22px;"src="assests/images/instagram.png" alt="instagram" >
-        </a>
-        <a href="https://www.twitter.com/" target="_blank">
-            <img style= "height: 20px; width: 22px;"src="assests/images/twitter.png" alt="twitter" >
-        </a>
-        <br>
-        © 2020 ROOM SEARCH PVT LTD.
+    <!-- ----Footer--- -->
+
+    <footer>
+        <div class="footer-content">
+            <div  style="text-decoration: none; color: black;"><a href="contact.html" target="_blank">Contact Us</a></div>
+            
+            <div id="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook" width="20px" height="22px"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="twitter" width="20px" height="22px"></a>
+                <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="instagram"width="20px" height="22px"></a>
+            </div>
+            <div class="txt">&copy; 2020 ROOM SEARCH PVT. LTD.</div>
+        </div> 
     </footer>
-       
+
+     
+    <!-- ----End of Footer--- -->
+ 
     </div>
 </div>
 </body>
