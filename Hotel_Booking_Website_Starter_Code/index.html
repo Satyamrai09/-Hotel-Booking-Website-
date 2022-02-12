@@ -7,21 +7,70 @@
     <title>Index</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/font.css">
+    <style>
+        .c1{
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+        .c2{
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+        .c3{
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+        .c4{
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+        .image_img{
+            display: block;
+            width: 100%;
+        }
+        .overlay{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color:white;
+            border-radius: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+          
+        }
+        .image_title{
+           color:#f1f1f1;
+        }
+        .overlay:hover{
+            opacity: 1;
+        }
+            </style>
 </head>
 <body>
 <div class="container" >
     <!-- -----------header----------- -->
     <header  >
-    <div class="header-container">
-        <div class="img-logo">
-            <img  src="assests/images/logo.png" alt="logo" >
-            <div class="log" style="text-decoration: none; color: black;"><a href="login.html">Login</a>
-            </div>
+    <div class="flexheader">
+        <div >
+            <img style="height: 60ox; width: 60px; margin-left: 10%; padding: 3%;" src="assests/images/logo.png" alt="logo" >
         </div>
+            <div style=" text-align: center; padding: 1%;"><a  href="login.html">Login</a>
+            </div>
+        
      </div>
     </header>
      <!-----------header ends-----------  -->
-    <div class="banner-image">
+     <div class="banner-image">
         <form  action=" "> 
         <input type="search" name="search" id="search" placeholder="City">
         </form>
@@ -29,16 +78,56 @@
         
     
     
-      <div id="content">
+    <div id="content">
+      
+        <div class="contentflex">
+            
+            <div class="c1"><img class="imgage_img" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="new-delhi"
+                width="150px" height="150px">
+                <a href="list.html"><div class="overlay">
+                    <div class="image_title">
+                        Delhi
+                    </div>
+                </div></a>
+                
+            </div>
+
+            <div class="c2"><img class="image_img" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="goa" width="150px"
+                height="150px">
+                <div class="overlay">
+                    <div class="image_title">
+                        Goa
+                    </div>
+                </div>
+            </div>
+
+            <div class="c3"><img class="imgage_img" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="charminar"
+                width="150px" height="150px">
+                <div class="overlay">
+                    <div class="image_title">
+                        Hyderabad
+                    </div>
+                </div>
+            </div>
+
+            <div class="c4"><img class="imgage_img" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
+                alt="kolkata-calcutta" width="150px" height="150px">
+                <div class="overlay">
+                    <div class="image_title">
+                        Kolkata
+                    </div>
+                </div> 
+            </div>
+                
+        </div>
+             <div>
+                <a style="text-align: center; margin-left: 47%;" href="index.html">View more>></a>
+             </div>
+                
+                
+        
      
-      <a href="list.html" alt="List">
-      <img style= "border-radius: 25%; padding: 4%; background-position: 100%; background-attachment: fixed; height: 150px; width: 150px;"src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="Delhi" >
-    </a>
-      <img style= "border-radius: 25%; padding: 4%; height: 150px; width: 150px;"src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="Goa" >
-      <img style= "border-radius: 25%; padding: 4%; height: 150px; width: 150px;"src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="Hyederabad" >
-      <img style= "border-radius: 25%; padding: 4%; height: 150px; width: 150px;"src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="Kolkata" >
-      <br>
-      <a style="text-align: center; margin-left: 40%;" href="index.html">View more>></a>
+     
     </div>
     
     <!-- Semantic Tags of HTML 5 -->
@@ -46,14 +135,14 @@
 
     <footer>
         <div class="footer-content">
-            <div  style="text-decoration: none; color: black;"><a href="contact.html" target="_blank">Contact Us</a></div>
-            
+            <div  style="margin-left: 2%;"><a href="contact.html" target="_blank">Contact Us</a></div>
+            <div class="txt">&copy; 2020 ROOM SEARCH PVT. LTD.</div>
             <div id="social-icons">
                 <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook" width="20px" height="22px"></a>
                 <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="twitter" width="20px" height="22px"></a>
                 <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="instagram"width="20px" height="22px"></a>
             </div>
-            <div class="txt">&copy; 2020 ROOM SEARCH PVT. LTD.</div>
+           
         </div> 
     </footer>
 

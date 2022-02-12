@@ -8,81 +8,94 @@
     <link rel="stylesheet" href="styles/list.css">
     <link rel="stylesheet" href="styles/font.css">
 </head>
-<body class="body">
-<div class="container">
+<body>
+<div class="maincontainer">
      <!-- sematic tags of HTML 5 -->
      <!------------ start of header-------- -->
-    <header class="header" ><!-- image tage containing logo -->
+     <header class="header" ><!-- image tage containing logo -->
         <div>
             <a href="index.html">
                 <img style="height:60px ; width: 60px;" src="assests/images/logo.png" alt="logo" >
             </a>
                 <a class="log" href="login.html">Login</a>
         </div>
-     
- 
-   
     </header>
    
        <!------------ end of header-------- -->
-    <div id="content">
+    <div id="contentall">
         <div class="view">
-            <a  href="#Listview" alt="list"><b>List View</b></a>
+            <a  class="LV" href="#Listview" alt="list"><b >List View</b></a>
            <a  href="#map" alt="list"><b>Map View</b></a>
         </div>
            
            <!-- jumping to specific part of page -->
+          <div class="container">
+              <div class="card">
+                  <div class="imgBX" id="Listview">
+                    <a href="detail.html">                      
+                        <img style="height: 200px; width: 250px;" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radison Blu">
+                    </div>
+                  <div class="content">
+                    <h3>Radison Blu Hotel</h3>
+                    <p>5 star </p>
+                     <p>New Delhi</p>
+                  </div>
+                     </a> 
+                  
+              </div>
+          </div>
 
-       <div id="Listview">
-          <a href="detail.html">
-             <div style=" margin:6%; width:90%; background-color: rgb(132,136,139);">
-            <img style="height: 200px; width: 250px;" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radison Blu">
-            <h3>Radison Blu Hotel</h3>
-            <p>5 star </p>
-            <p>New Delhi</p>
+          <div class="container">
+              <div class="card">
+                  <div class="imgBX">
+                    <img style="height: 200px; width: 250px;"src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg
+                    " alt="The Lalit New Delhi"> 
+                  </div>
+                  <div class="content">
+                    <h3>The Lalit New Delhi</h3>
+                    <p>4.5 star </p>
+                    <p>New Delhi</p>
+                  </div>
+              </div>
           </div>
-          </a>  
-     
-      
-          <div style=" margin:6%; width:90%; background-color: rgb(132,136,139);">
-          <img style="height: 200px; width: 250px;"src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg
-          " alt="The Lalit New Delhi">
-          <h3>The Lalit New Delhi</h3>
-          <p>4.5 star </p>
-          <p>New Delhi</p>
+           
+          <div class="container">
+              <div class="card">
+                  <div class="imgBX">
+                    <img style="height: 200px; width: 250px;"src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="Taj Palace">   
+                  </div>
+                  <div class="content">
+                    <h3>Taj Palace</h3>
+                    <p>4.0 star </p>
+                    <p>New Delhi</p>
+                  </div>
+              </div>
           </div>
-          <div style=" margin:6%; width:90%; background-color: rgb(132,136,139);">
-          <img style="height: 200px; width: 250px;"src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="Taj Palace">
-          <h3>Taj Palace</h3>
-          <p>4.0 star </p>
-          <p>New Delhi</p>
-         </div>
-       </div>
-       <br>
-       
-    
-       
-       
-    
-    </div>
+ </div>
     <!-- Semantic Tags of HTML 5 -->
     <!-- ----Footer--- -->
 
     <footer>
         <div class="footer-content">
-            <div  style="text-decoration: none; color: black;"><a href="contact.html" target="_blank">Contact Us</a></div>
-            
+            <div  style="margin-left: 2%;">
+                <a href="contact.html" target="_blank">Contact Us</a>
+            </div>
+            <div class="txt">
+                &copy; 2020 ROOM SEARCH PVT. LTD.
+            </div>
             <div id="social-icons">
                 <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook" width="20px" height="22px"></a>
                 <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="twitter" width="20px" height="22px"></a>
                 <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="instagram"width="20px" height="22px"></a>
             </div>
-            <div class="txt">&copy; 2020 ROOM SEARCH PVT. LTD.</div>
+           
         </div> 
     </footer>
 
      
     <!-- ----End of Footer--- -->
 </div>
+    
+
 </body>
 </html>
