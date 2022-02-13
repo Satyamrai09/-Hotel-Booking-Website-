@@ -1,0 +1,118 @@
+body{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #e0e0e0;
+    font-family: 'Ubuntu', sans-serif;
+}
+body a{
+    text-decoration: none;
+    color: black;
+}
+.container{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5.5%;
+}
+/* -----header------ */
+.header{
+    background-color:rosybrown;
+    width: 100%;
+    position: fixed;
+
+}
+.log{
+    float: right;
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+/* -------header ends------ */
+#content{
+    margin-top: 5.5%;
+}
+.booking{
+    display: flex;
+    flex-direction: row;
+  height: 435px;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    margin: 3%;
+    
+
+   
+}
+.img{
+ flex: 1 1 0;
+ margin-left: 10%;
+}
+
+.wrapper {
+    flex: 2 2 0;
+    /* list-style-type: none; */
+    padding: 0;
+    border-left: 1px solid black ;
+    margin-right: 5%;
+     
+  }
+  .form-row {
+    display: flex;
+    margin: 5%;
+    justify-content: flex-start;
+    align-content: stretch;
+    padding: .5em;
+  }
+  .form-row > label {
+    padding: .5em 1em .5em 0;
+   
+    flex: 1;
+  }
+  .form-row > input {
+    flex: 2;
+   margin: 5%;
+    width: 80%;
+  }
+  .form-row > input,
+  .form-row > button {
+    padding: 1%;
+  }
+  .form-row > button {
+   background: gray;
+   color: white;
+   border: 0;
+   padding: 5%;
+   width: 3%;
+  }
+  .form-row.book:hover{
+      background-color: green;
+  }
+
+.img{
+    width: 66%;
+}
+/* stylling of footer */
+
+.footer-content{
+    background-color: rosybrown;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.txt{
+   
+font-size: 10px;
+}
+#social-icons{
+ 
+ float: right;
+ margin-bottom: 5px;
+ padding: 1%;
+ 
+
+}
