@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="styles/detail.css">
+    <link rel="stylesheet" href="styles/font.css">
+</head>
+<body>
+<div class="container">
+     <!------------ start of header-------- -->
+     <header class="header" ><!-- image tage containing logo -->
+        <div>
+            <a href="index.html">
+                <img style="height:60px ; width: 60px;" src="assests/images/logo.png" alt="logo" >
+            </a>
+            <a class="log" href="login.html">
+                <button type="button" class="btn btn-link btn-sm">LOGIN</button>
+            </a>
+        </div>
+    </header>
+   
+       <!------------ end of header-------- -->
+    <div id="content">
+        <div class="booking">
+            <div class="img">
+                <img style=" margin-top: 2%;margin-left:8% ;max-height: 350px; margin-right: 4%;margin-bottom: 0%; width: 66%;" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radison Blu">
+            </div>
+          
+        <div class="form">
+            <form style ="margin-left: 4%; margin-right: 4%; margin-bottom: 1%; " method="get" action="payment.html">
+                <uL class="wrapper">
+                    <li class="form-row">
+                        <label for="adults">Adults:</label>
+                        <input type="number" min="1"><br>
+                    </li>
+                    <li class="form-row">
+                        <label for="name">Name:</label>
+                        <input type="text" required><br>
+                    </li>
+                    <li class="form-row">
+                        <label for="from date">From Date:</label>
+                        <input type="date" required><br>
+                    </li>
+                    <li class="form-row">
+                        <label for="to date">To Date:</label>
+                        <input type="date" required><br>
+                    </li>
+                    <li class="form-row">
+                        <label for="total">Total:</label>
+                        <input type="text" disabled><br>
+                    </li>
+                    <li class="form-row">
+                        <input class="book" style="border-color: green; color: green;background-color: transparent;" type="submit" value="Book Now">
+                    </li>
+                </uL>
+            </form>
+        </div>
+       
+        </div>
+        
+        <div style="margin-left:4% ; margin-right: 4%; margin-bottom: 2%; margin-top: 1%;">
+        <h2 style="font-family: cursive;">Radison Blu Hotel</h2>
+        <p>RATING</p>
+       
+
+        <p>5 star </p>
+        <h5 style="font-family: cursive;">AMENTIES</h5>
+        <ul>
+            <li>Room service</li>
+            <li>Restaurant</li>
+            <li>Business center</li>
+            <li>Fitness center</li>
+            <li>Pool</li>
+        </ul>
+        <h5 style="font-family: cursive;">DESCRIPTION</h5>
+        <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis quas delectus sint debitis earum ut impedit ipsa aliquam? Provident excepturi ipsum corporis dolore quod qui rem rerum beatae, praesentium natus.</P>
+    </div>
+    </div>
+   <!-- ----Footer--- -->
+
+   <footer>
+    <div class="footer-content">
+        <div  style="margin-left: 2%;">
+            <a href="contact.html" >
+                <button style="background-color:rgb(50, 150, 150);color: white;" type="button" class="btn btn-link ">Contact Us</button>
+            </a>
+        </div>
+        <div class="txt">&copy; 2020 ROOM SEARCH PVT. LTD.</div>
+        <div id="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook" width="20px" height="22px"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="twitter" width="20px" height="22px"></a>
+            <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="instagram"width="20px" height="22px"></a>
+        </div>
+       
+    </div> 
+</footer>
+ 
+<!-- ----End of Footer--- -->
+</div>
+</body>
+</html>
