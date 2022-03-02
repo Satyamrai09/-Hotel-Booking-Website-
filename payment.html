@@ -1,87 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles/payment.css">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/font.css">
+  
+    <title>Payment</title>
+  </head>
 <body>
-    <div class="container">
-        <!------------ start of header-------- -->
-        <header class="header" ><!-- image tage containing logo -->
-            <div>
-                <a href="index.html">
-                    <img style="height:60px ; width: 60px;" src="assests/images/logo.png" alt="logo" >
-                </a>
-                <a class="log" href="login.html">
-                    <button type="button" class="btn btn-link btn-sm">LOGIN</button>
-                </a>
-            </div>
-        </header>
-   
-       <!------------ end of header-------- -->
-       <div id="content">
-        <div class="contents" >
-            <img style="max-height: 300px; max-width: 270px;" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radison Blu">
-            <div class="text">
-                <h3 style="font-family: cursive;">Radisson Blu hotel</h3>
-                <p>#38 of 1,289 hotels in New Delhi</p>
-                <P>National Highway 8, New Delhi 110017 India</P>
-            </div>
-           
-        </div>
-     <div class="Detail" style="margin:4%;">
-            <!-- Details of customer -->
-            <div class="Details">
-                <p><b>Name:</b>Jhon Doe</p>
-                <p><b>Number of Adults:</b>2</p>
-           
-            
-            <!-- details of hotel check in check out -->
-            
-                <p><b>Check-in Date:</b>06/062020</p>
-                <p><b>Check-out Date:</b>08/062020</p>
-            </div>
-           
-        
-            <div class="Tariff" style=" margin-top: 15%; margin-left: 25%;">
-               <p><b>Tariff Breakdown:</b>Rs 1000*2 Adults * 5 Nights</p>
-               <p><B>Total Amount:</B>Rs 10000</p>           
-           </div>
-            <!-- link for payment -->
-            <div class="payment" style=" text-align: center; margin-top: 20%;">
-                <a  href="payment.html">
-                    <button style="border: 0px; background-color:rgb(54, 134, 54);color:rosybrown;" type="button" class="btn btn-link ">Pay Now</button>
-                </a>
-            </div>
-        
-       </div>
-     </div> 
-    
-    <!-- Semantic Tags of HTML 5 -->
-    <!-- ----Footer--- -->
+    <div id="container">
+   <!------------------------------------------------------------Header Starts--------------------------------------------------------------------->
 
-    <footer>
-        <div class="footer-content">
-            <div  style="margin-left: 2%;">
-                <a href="contact.html" >
-                    <button style="background-color:rgb(50, 150, 150);color: white;" type="button" class="btn btn-link ">Contact Us</button>
-                </a>
+   <header>
+    <a href="index.html"><img id="logo" src="./assests/images/logo.png" height="150px" width="160px" alt="Logo"></a>
+    <div id="login">
+      <button class="btn btn-light" data-toggle="modal" data-target="#login-modal" type="button">
+        Login
+      </button>
+    </div>
+  </header>
+<!------------------------------------------------------------Header Ends----------------------------------------------------------------------->
+
+  <!-- -----------------------------------------------------   LOGIN MODAL STARTS  ------------------------------------------------------- -->
+
+      <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Please Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
             </div>
-            <div class="txt">&copy; 2020 ROOM SEARCH PVT. LTD.</div>
-            <div id="social-icons">
-                <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook" width="20px" height="22px"></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="twitter" width="20px" height="22px"></a>
-                <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="instagram"width="20px" height="22px"></a>
+            <div class="modal-body ">
+              <div style="margin: 4% 0;" class="d-flex justify-content-around">
+                <label for="username">Username:</label>
+                <input type="text" placeholder="Enter Username" name="username" id="username">
+              </div>
+              <div style="margin: 4% 0;" class="d-flex justify-content-around">
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter Password" name="password" id="password">
+              </div>
             </div>
-           
-        </div> 
-    </footer>
-    
-     
-    <!-- ----End of Footer--- -->
-</div>
-</body>
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="button" class="btn btn-primary">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- -----------------------------------------------------   LOGIN MODAL Ends  ------------------------------------------------------- -->
+
+    <!-- -----------------------------------------------------   Contact MODAL STARTS  ------------------------------------------------------- -->
+
+      <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Get in touch</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body ">
+              <p>Thank you for reaching out!!! <br> please enter your email and we will get back to you.</p>
+              <div class="d-flex align-self-start align-items-baseline">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Enter your email id" name="email" id="email">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- -----------------------------------------------------   Contact MODAL Ends  ------------------------------------------------------- -->
+
+      <div id="contentDiv">
+  
+        <div id="descriptionDiv">
+          <img class="hotelImage" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radison Blu Hotel">
+          <div id="description">
+            <h2>Radison Blu Hotel</h2>
+            <p>#38 of 1,289 hotels in New Delhi</p>
+            <p>National Highway 8, New Delhi 110017 India</p>
+          </div>
+        </div>
+        <div id="paymentDiv">
+          <div id="customerInfo">
+            <p><strong><span class="heading"> Name:</span></strong><span> John Doe</span></p>
+            <p><strong><span class="heading"> Number of Adults:</span></strong><span> 2</span></p>
+            <p><strong><span class="heading"> Check-in Date:</span></strong><span> 30-01-2022</span></p>
+            <p><strong><span class="heading"> Check-out Date:</span></strong><span> 01-02-2022</span></p>
+          </div>
+  
+          <div id="tarrifBreakdown">
+            <p><strong><span class="heading"> Tarrif Breakdown:</span></strong><span> Rs. 1000 x 2 Adults x 2 Nights</span></p>
+            <p><strong><span class="heading"> Total Amount:</span></strong><span> Rs. 4000</span></p>
+          </div>
+  
+          <div id="payButton">
+            <button type="button" class="btn btn-outline-success" disabled="">Pay Now</button>
+          </div>
+        </div>
+      </div>
+  
+  <!------------------------------------------------------------Footer Starts-------------------------------------------------------------->
+
+  <footer>
+    <div id="contact">
+      <button data-toggle="modal" data-target="#contact-modal" class="btn btn-info">
+        <p id="contactBtn" style="color: #000;">Contact Us</p>
+      </button>
+    </div>
+    <div id="copyright">
+      <p id="copyrightId">Ⓒ 2020 ROOM SEARCH PVT. LTD.</p>
+    </div>
+    <div id="socialMediaPic">
+      <a href="https://www.facebook.com" target="_blank"><img class="socialMediaClass" src="assests/images/facebook.png" alt="facebook"></a>
+      <a href="https://www.instagram.com" target="_blank"><img class="socialMediaClass" src="assests/images/instagram.png" alt="instagram"></a>
+      <a href="https://www.twitter.com" target="_blank"><img class="socialMediaClass" src="assests/images/twitter.png" alt="twitter"></a>
+    </div>
+  </footer>
+<!------------------------------------------------------------Footer Ends------------------------------------------------------------------->
+    </div>
+  
+  
+  
+  </body>
 </html>

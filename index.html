@@ -4,217 +4,178 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <title>Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/font.css">
-    <style>
-               /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-        .c1{
-            position: relative;
-            width: 150px;
-            height: 150px;
-        }
-        .c2{
-            position: relative;
-            width: 150px;
-            height: 150px;
-        }
-        .c3{
-            position: relative;
-            width: 150px;
-            height: 150px;
-        }
-        .c4{
-            position: relative;
-            width: 150px;
-            height: 150px;
-        }
-        .image_img{
-            display: block;
-            width: 100%;
-        }
-        .overlay{
-            position: absolute;
-            top:0;
-            left:0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            color:white;
-            border-radius: 25%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-          
-        }
-        .image_title{
-           color:#f1f1f1;
-        }
-        .overlay:hover{
-            opacity: 1;
-        }
-            </style>
+    <link rel="stylesheet" href="styles/common.css">
+    <title>Index</title>
 </head>
 <body>
-<div class="container" >
-    <!-- -----------header----------- -->
-    <header  >
-    <div class="flexheader">
-        <div >
-            <img style="height: 60ox; width: 60px; margin-left: 10%; padding: 3%;" src="assests/images/logo.png" alt="logo" >
-        </div>
-            <div style=" text-align: center; padding: 1%;">
-                <a  href="login.html">
-                    <button type="button" class="btn btn-link btn-sm">LOGIN</button>
-                    <div id="myModal" class="modal">
-                        <div class="modal-content">
-                            <form method="get" action="index.html">
-                                <label for="username">Username:</label>
-                                <input type="text" placeholder="Enter Username" required autocomplete="off">
-                                <br>
-                                <label for="password">Password:</label>
-                                <input type="password" placeholder="Enter Password" required>
-                                <br>
-                             
-                                <input type="submit" value="Login">
-                            
-                            </form>
-                        </div>
-                        
-                    </div>
-                </a>
-            </div>
-        
-     </div>
-    </header>
-     <!-----------header ends-----------  -->
-     <div class="banner-image">
-        <form  action=" "> 
-        <input type="search" name="search" id="search" placeholder="City">
-        </form>
-    </div>
-        
-    
-    
-    <div id="content">
-      
-        <div class="contentflex">
-            
-            <div class="c1"><img class="imgage_img" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="new-delhi"
-                width="150px" height="150px">
-                <a href="list.html"><div class="overlay">
-                    <div class="image_title">
-                        Delhi
-                    </div>
-                </div></a>
-                
-            </div>
+    <div id="mainContainer">
 
-            <div class="c2"><img class="image_img" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="goa" width="150px"
-                height="150px">
-                <div class="overlay">
-                    <div class="image_title">
-                        Goa
+        <!------------------------------------------------------------Header Starts------------------------------------------------------>
+        
+            <header>
+              <img id="logo" src="assests/images/logo.png" height="150px" width="160px" alt="Logo">
+              <div id="login">
+                <button class="btn btn-light" data-toggle="modal" data-target="#login-modal" type="button">
+                  Login
+                </button>
+              </div>
+            </header>
+        <!------------------------------------------------------------Header Ends------------------------------------------------------------>
+
+        <!------------------------------------------------------------Login Modal------------------------------------------------------------>
+            <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Please Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body ">
+                    <div style="margin: 4% 0;" class="d-flex justify-content-around">
+                      <label for="username">Username:</label>
+                      <input type="text" placeholder="Enter Username" name="username" id="username">
                     </div>
+                    <div style="margin: 4% 0;" class="d-flex justify-content-around">
+                      <label for="password">Password:</label>
+                      <input type="password" placeholder="Enter Password" name="password" id="password">
+                    </div>
+                  </div>
+                  <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary">Login</button>
+                  </div>
                 </div>
+              </div>
             </div>
+        <!------------------------------------------------------------Login Modal Ends------------------------------------------------------------>
 
-            <div class="c3"><img class="imgage_img" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="charminar"
-                width="150px" height="150px">
-                <div class="overlay">
-                    <div class="image_title">
-                        Hyderabad
-                    </div>
-                </div>
-            </div>
-
-            <div class="c4"><img class="imgage_img" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
-                alt="kolkata-calcutta" width="150px" height="150px">
-                <div class="overlay">
-                    <div class="image_title">
-                        Kolkata
-                    </div>
-                </div> 
-            </div>
-                
-        </div>
-             <div>
-                <a style="text-align: center; margin-left: 47%;" href="index.html">
-                <button style="background-color: grey; color: white;" type="button" class="btn btn-link">View More</button>
-            </a>
-             </div>
-                
-                
         
-     
-     
-    </div>
-    
-    <!-- Semantic Tags of HTML 5 -->
-    <!-- ----Footer--- -->
+        <!------------------------------------------------------------Contact Modal Starts------------------------------------------------------------>
+        
+            <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Get in touch</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body ">
+                    <p>Thank you for reaching out!!! <br> please enter your email and we will get back to you.</p>
+                    <div class="d-flex align-self-start align-items-baseline">
+                      <label for="email">Email:</label>
+                      <input type="email" placeholder="Enter your email id" name="email" id="email">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+        <!------------------------------------------------------------Contact Modal Ends------------------------------------------------------------>
 
-    <footer>
-        <div class="footer-content">
-            <div  style="margin-left: 2%;">
-                <a href="contact.html" >
-                    <button style="background-color:rgb(50, 150, 150);color: white;" type="button" class="btn btn-link ">Contact Us</button>
+        
+        <!------------------------------------------------------------Content Div Starts------------------------------------------------------------>
+        
+            <div id="contentDiv">
+              <div id="searchbarDiv">
+                <input id="searchbar" type="text" name="searchbar" placeholder="City">
+              </div>
+        
+        <!------------------------------------------------------------City Cards------------------------------------------------------------>
+        
+              <div id="city">
+                <a href="list.html" class="cityImage" target="_self" style="text-decoration: none;">
+                  <div class="cityImage" style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg) ;">
+                    <div class="bckgroundColor">
+                      <p>Delhi</p>
+                    </div>
+                  </div>
                 </a>
+                <div class="cityImage" style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg) ;">
+                  <div class="bckgroundColor">
+                    <p>Goa</p>
+                  </div>
+                </div>
+                <div class="cityImage" style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg) ;">
+                  <div class="bckgroundColor">
+                    <p>Hyderabad</p>
+                  </div>
+                </div>
+                <div class="cityImage" style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg) ;">
+                  <div class="bckgroundColor">
+                    <p>Kolkata</p>
+                  </div>
+                </div>
+              </div>
+        
+        
+              <div id="city">
+                <a href="list.html" class="cityImage" target="_self" style="text-decoration: none;">
+                  <div class="cityImage" style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg) ;">
+                    <div class="bckgroundColor">
+                      <p>Chennai</p>
+                    </div>
+                  </div>
+                </a>
+                <div class="cityImage" style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg) ;">
+                  <div class="bckgroundColor">
+                    <p>Agra</p>
+                  </div>
+                </div>
+                <div class="cityImage" style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg) ;">
+                  <div class="bckgroundColor">
+                    <p>Jaipur</p>
+                  </div>
+                </div>
+                <div class="cityImage" style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg) ;">
+                  <div class="bckgroundColor">
+                    <p>Bengaluru</p>
+                  </div>
+                </div>
+              </div>
+        
+        
+        <!------------------------------------------------------------ViewMore Button------------------------------------------------------------>
+        
+              <div id="viewMoreButton">
+                <a style="color: #000; text-decoration: none;" href="">
+                  <button class="btn btn-secondary">View more</button>
+                </a>
+              </div>
             </div>
-            <div class="txt">&copy; 2020 ROOM SEARCH PVT. LTD.</div>
-            <div id="social-icons">
-                <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook" width="20px" height="22px"></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="twitter" width="20px" height="22px"></a>
-                <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="instagram"width="20px" height="22px"></a>
-            </div>
-           
-        </div> 
-    </footer>
+        
+        
+        <!------------------------------------------------------------Content Div Ends------------------------------------------------------------>
 
-     
-    <!-- ----End of Footer--- -->
- 
-    </div>
-</div>
+        <!------------------------------------------------------------Footer Starts------------------------------------------------------------>
+        
+            <footer>
+              <div id="contact">
+                <button data-toggle="modal" data-target="#contact-modal" class="btn btn-info">
+                  <p id="contactBtn" style="color: #000;">Contact Us</p>
+                </button>
+              </div>
+              <div id="copyrightDiv">
+                <p id="copyrightId">Ⓒ 2020 ROOM SEARCH PVT. LTD.</p>
+              </div>
+              <div id="socialMediaPic">
+                <a href="https://www.facebook.com" target="_blank"><img class="socialMediaClass" src="assests/images/facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img class="socialMediaClass" src="assests/images/instagram.png" alt="instagram"></a>
+                <a href="https://www.twitter.com" target="_blank"><img class="socialMediaClass" src="assests/images/twitter.png" alt="twitter"></a>
+              </div>
+            </footer>
+        <!------------------------------------------------------------Footer Ends------------------------------------------------------------>
+
+          </div>
 </body>
 </html>

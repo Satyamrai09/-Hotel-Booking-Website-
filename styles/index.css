@@ -1,107 +1,69 @@
-html, body{
-    margin: 0px;
-    height: 100%;
+#bckContainer{
+    height : 100%;
     width: 100%;
+  }
+  body{
+    margin: 0 auto;
     background-color: #e0e0e0;
-    font-family: 'Ubuntu', sans-serif;
-    
-}
-body a{
-    text-decoration: none;
-    color: black;
-  
-}
-.container{
-    width: 100%;
-    overflow:hidden;
-    
-   
-}
-#content{
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 10%;
-    
-
-   
-   
-}
-/* -------header Starts */
-.flexheader{
-    background-color:rosybrown;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-/* -----header Ends-------- */
-.banner-image{
-    background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
-    height: 380px;
-    width: 100%;
-    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+  }
+  #searchbarDiv{
+    display: grid;
+    position: relative;
+    background-image: url(	https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
+    background-repeat: no-repeat;
     background-position: center;
-    margin-top: 4.5%;
+    background-size:cover;
   
-    
-  
-}
-.banner-image input{
-    margin-left: 36%;
-    margin-top: 12%;
-    margin-right: 40%;
-    align-items: center;
+    min-height: 480px;
+    place-items: center;
+  }
+  #searchbar{
+    border: 1px solid;
+    border-color:  #f1f1f1;
     padding: 10px;
     font-size: 16px;
-    width: 380px;
     border-radius: 12px;
-    border: 1px transparent;
-    outline: none;;
-}
-.contentflex{
+    width: 26%;
+    outline: none;
+  }
+  #city{
+    min-height: 300px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  
-    margin-top: 6%;
-    margin-bottom: 4%;
-    
-}
-.contentflex>div img{
+    justify-content: space-evenly;
+    place-items: center;
+  }
+  .cityImage{
+    display: flex;
+    height: 150px;
+    width: 150px;
     border-radius: 25%;
-    
     box-shadow: 10px 10px 10px grey;
-}
-/* .contentflex{
-    margin-left: 15%;
-    margin-right: 15%;
-
-} */
-
-
-.footer-content{
-    background-color: rosybrown;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    place-items: center;
+    justify-content: space-around;
+  }
+  #viewMoreButton{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+  .bckgroundColor{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    
-}
-
-.txt{
-   
-font-size: 10px;
-}
-#social-icons{
- 
- float: right;
- margin-bottom: 5px;
- padding: 1%;
- 
-
-}
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    border-radius: 25%;
+    opacity: 0;
+  }
+  .bckgroundColor:hover{
+  opacity: 1;
+  }
+  .bckgroundColor p{
+    color: #f1f1f1;
+  }
