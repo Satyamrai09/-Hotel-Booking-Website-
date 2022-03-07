@@ -1,104 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/loader.css">
+    <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/detail.css">
-    <link rel="stylesheet" href="styles/font.css">
 </head>
+
 <body>
-<div class="container">
-     <!------------ start of header-------- -->
-     <header class="header" ><!-- image tage containing logo -->
-        <div>
-            <a href="index.html">
-                <img style="height:60px ; width: 60px;" src="assests/images/logo.png" alt="logo" >
-            </a>
-            <a class="log" href="login.html">
-                <button type="button" class="btn btn-link btn-sm">LOGIN</button>
-            </a>
-        </div>
-    </header>
-   
-       <!------------ end of header-------- -->
-    <div id="content">
-        <div class="booking">
-            <div class="img">
-                <img style=" margin-top: 2%;margin-left:8% ;max-height: 350px; margin-right: 4%;margin-bottom: 0%; width: 66%;" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radison Blu">
+    
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header-footer" id="header"></header>
+
+        <!-- Content  -->
+        <div id="detail-container">
+            <div id="slideshow-booking">
+                <div id="slideshow-container">
+                    <div id="carousel-controls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" id="carousel-parent"></div>
+                        <a class="carousel-control-prev" href="#carousel-controls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-controls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div id="booking-form">
+                    <form action="payment.html" method="get" autocomplete="off">
+                        <div class="outer">
+                            <label for="adult">Adults:</label>
+                            <input class="inner" type="number" name="adult" id="adult" value="1" min="1"
+                                oninput="updatePrice()" required />
+                        </div>
+
+                        <div class="outer">
+                            <label for="name">Name:</label>
+                            <input class="inner" type="text" name="name" id="name" required />
+                        </div>
+
+                        <div class="outer">
+                            <label for="fromDate">From Date:</label>
+                            <input class="inner" type="date" name="fromDate" id="fromDate" oninput="updatePrice()"
+                                required />
+                        </div>
+
+                        <div class="outer">
+                            <label for="toDate">To Date:</label>
+                            <input class="inner" type="date" name="toDate" id="toDate" oninput="updatePrice()"
+                                required />
+                        </div>
+
+                        <div class="outer">
+                            <label for="price">Total:</label>
+                            <input class="inner" type="text" name="price" id="price" readonly />
+                            <input class="inner" type="hidden" id="id" name="id">
+                        </div>
+
+                        <div>
+                            <input type="submit" class="btn btn-outline-success" value="Book Now" id="book-now" />
+                        </div>
+                    </form>
+                </div>
             </div>
-          
-        <div class="form">
-            <form style ="margin-left: 4%; margin-right: 4%; margin-bottom: 1%; " method="get" action="payment.html">
-                <uL class="wrapper">
-                    <li class="form-row">
-                        <label for="adults">Adults:</label>
-                        <input type="number" min="1"><br>
-                    </li>
-                    <li class="form-row">
-                        <label for="name">Name:</label>
-                        <input type="text" required><br>
-                    </li>
-                    <li class="form-row">
-                        <label for="from date">From Date:</label>
-                        <input type="date" required><br>
-                    </li>
-                    <li class="form-row">
-                        <label for="to date">To Date:</label>
-                        <input type="date" required><br>
-                    </li>
-                    <li class="form-row">
-                        <label for="total">Total:</label>
-                        <input type="text" disabled><br>
-                    </li>
-                    <li class="form-row">
-                        <input class="book" style="border-color: green; color: green;background-color: transparent;" type="submit" value="Book Now">
-                    </li>
-                </uL>
-            </form>
+            <div id="hotel-description">
+                <h2 id="hotel-name"></h2>
+                <h5 class="heading">RATING</h5>
+                <div id="rating">
+                    <span class="fa fa-star checked" id="1"></span>
+                    <span class="fa fa-star checked" id="2"></span>
+                    <span class="fa fa-star checked" id="3"></span>
+                    <span class="fa fa-star checked" id="4"></span>
+                    <span class="fa fa-star checked" id="5"></span>
+                </div>
+                <h5 class="heading">AMENITIES</h5>
+                <ul id="amenities"></ul>
+                <h5 class="heading" id="description">DESCRIPTION</h5>
+            </div>
         </div>
-       
-        </div>
-        
-        <div style="margin-left:4% ; margin-right: 4%; margin-bottom: 2%; margin-top: 1%;">
-        <h2 style="font-family: cursive;">Radison Blu Hotel</h2>
-        <p>RATING</p>
-       
 
-        <p>5 star </p>
-        <h5 style="font-family: cursive;">AMENTIES</h5>
-        <ul>
-            <li>Room service</li>
-            <li>Restaurant</li>
-            <li>Business center</li>
-            <li>Fitness center</li>
-            <li>Pool</li>
-        </ul>
-        <h5 style="font-family: cursive;">DESCRIPTION</h5>
-        <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis quas delectus sint debitis earum ut impedit ipsa aliquam? Provident excepturi ipsum corporis dolore quod qui rem rerum beatae, praesentium natus.</P>
+        <!-- Footer -->
+        <footer class="header-footer" id="footer"></footer>
     </div>
-    </div>
-   <!-- ----Footer--- -->
 
-   <footer>
-    <div class="footer-content">
-        <div  style="margin-left: 2%;">
-            <a href="contact.html" >
-                <button style="background-color:rgb(50, 150, 150);color: white;" type="button" class="btn btn-link ">Contact Us</button>
-            </a>
-        </div>
-        <div class="txt">&copy; 2020 ROOM SEARCH PVT. LTD.</div>
-        <div id="social-icons">
-            <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook" width="20px" height="22px"></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="twitter" width="20px" height="22px"></a>
-            <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="instagram"width="20px" height="22px"></a>
-        </div>
-       
-    </div> 
-</footer>
- 
-<!-- ----End of Footer--- -->
-</div>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/detail.js"></script>
 </body>
+
 </html>
